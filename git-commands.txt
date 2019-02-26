@@ -1,0 +1,433 @@
+ 501  ll
+  502  ls -al
+  503  cat first_file.txt 
+  504  git config
+  505  git config --system
+  506  git config --system
+  507  git config --system
+  508  git config --global
+  509  git config --local
+  510  ls a-l
+  511  ls -al
+  512  ls -al .git/
+  513  cat .git/config 
+  514  vi .git/config 
+  515  cd .git/
+  516  ll
+  517  cat HEAD 
+  518  ll refs/
+  519  ll refs/heads/master 
+  520  cat refs/heads/master 
+  521  git log
+  522  git status
+  523  cd ..
+  524  git status
+  525  vi second_file.txt
+  526  vi third_file.txt
+  527  git status
+  528  git add second_file.txt 
+  529  git status
+  530  git add third_file.txt 
+  531  git status
+  532  git commit -m "Add second and third files to project"
+  533  git status
+  534  git log
+  535  vi first_file.txt 
+  536  git status
+  537  git add first_file.txt 
+  538  git status
+  539  vi second_file.txt 
+  540  vi third_file.txt 
+  541  git status
+  542  git add second_file.txt 
+  543  git status
+  544  git commit -m "Made changes to first and second files"
+  545  git status
+  546  git log
+  547  git add third_file.txt 
+  548  git status
+  549  git commit -m "Made changes to third file."
+  550  git status
+  551  git log
+  552  vi first_file.txt 
+  553  git status
+  554  git diff
+  555  vi first_file.txt 
+  556  git diff
+  557  vi third_file.txt 
+  558  git status
+  559  git diff
+  560  git diff first_file.txt 
+  561  git status
+  562  git add first_file.txt 
+  563  git status
+  564  git diff
+  565  git diff --stage
+  566  git diff --staged
+  567  git diff --staged
+  568  cat first_file.txt 
+  569  git status
+  570  git add third_file.txt 
+  571  git status
+  572  git diff
+  573  git diff --staged
+  574  git commit -m "Minor text edits"
+  575  git diff --staged
+  576  git diff
+  577  git status
+  578  vi file_to_delete1.txt
+  579  git diff
+  580  git status
+  581  cp file_to_delete1.txt file_to_delete2.txt 
+  582  ll
+  583  git status
+  584  git add .
+  585  git status
+  586  git commit "The 'red shirt' files"
+  587  git commit -m "The 'red shirt' files"
+  588  git status
+  589  git status
+  590  git rm file_to_delete1.txt
+  591  git status
+  592  git commit -m "Deleted first red shirt file"
+  593  git status
+  594  git log
+  595  ll
+  596  git rm file_to_delete2.txt 
+  597  ll
+  598  git status
+  599  git commit -m "Deleted second red shirt file"
+  600  git status
+  601  ll
+  602  mv first_file.txt primary_file.txt
+  603  git status
+  604  git add primary_file.txt 
+  605  git rm first_file.txt
+  606  git status
+  607  git mv second_file.txt seconadry_file.txt
+  608  git status
+  609  ll
+  610  mkdir first_directory
+  611  git status
+  612  git mv third_file.txt first_directory/
+  613  git status
+  614  ll
+  615  git commit -m "Reorganized file by moving files."
+  616  git status
+  617  ll
+  618  cd ..
+  619  ll
+  620  ls -al
+  621  cd explore_california/
+  622  ls -al
+  623  git status
+  624  git init
+  625  ls -lt
+  626  ls -al
+  627  git status
+  628  git log
+  629  git add .
+  630  git status
+  631  git commit -m "Initial commit"
+  632  git status
+  633  git log
+  634  ll
+  635  git stats
+  636  git status
+  637  git status
+  638  git status
+  639  git diff 
+  640  git diff --color-words contact.html 
+  641  git status
+  642  git commit -a -m "Changed 24 hr support number to 4314"
+  643  git log
+  644  git mv tours/tour_detail_backpack.html tours/tour_detail_backpack_cal.html 
+  645  git status
+  646  git status
+  647  git diff 
+  648  git add tours.html 
+  649  git add tours/
+  650  git status
+  651  git status
+  652  git commit -m "Renamed backpack CAL file for clarity"
+  653  git status
+  654  git add contact.html 
+  655  git status
+  656  git commit -m "Removed contractions from page text."
+  657  git log
+  658  git status
+  
+  Undoing changes in working directory:
+  -------------------------------------
+  659  git status
+  660  git diff
+  661  git checkout -- index.html 
+  662  git status
+  663  history 
+
+  Undoing changes in staging area/index (amend):
+  --------------------------------------
+  664  git status
+  665  git diff
+  666  git add resources.html 
+  667  git status
+  668  git diff
+  669  git reset HEAD resources.html 
+  670  git diff
+  671  git status
+  672  git add resources.html 
+  673  git status
+  674  git commit -m "rearrange the items to bring on a trip."
+  675  git status
+  676  git log
+  677  git status
+  678  ll
+  679  git status
+  680  git add resources.html 
+  681  git status
+  682  git commit --amend -m "Rearrange the items to bring on a trip."
+  683  git status
+  684  git log
+  
+#Retrieving old versions:
+
+#   Reverting back to previous version of file (1a52e4ce1a7b4999c6e77a95c345dea4eed00439 -> 72a6b4ebd529a1e6b69b5dc7b3808ad287b9473f)
+#   Will move file from repository to staging index!
+  git log
+    commit 1a52e4ce1a7b4999c6e77a95c345dea4eed00439 (HEAD -> master)    <<-------- latest commit of file
+    Author: Chris Bezuidenhout <Bezuidenhout.chris@gmail.com>
+    Date:   Tue Feb 19 16:22:39 2019 +0000
+
+        Rearrange the items to bring on a trip.
+
+    commit 72a6b4ebd529a1e6b69b5dc7b3808ad287b9473f          <<----------- revert back to this version of file
+    Author: Chris Bezuidenhout <Bezuidenhout.chris@gmail.com>
+    Date:   Tue Feb 19 15:49:43 2019 +0000
+
+        Removed contractions from page text.
+
+    commit fe0e10ef828e20339dacffdd1c7b91828c1cc51d
+    Author: Chris Bezuidenhout <Bezuidenhout.chris@gmail.com>
+    Date:   Tue Feb 19 15:48:41 2019 +0000
+
+        Renamed backpack CAL file for clarity
+
+    commit f20aa180d5c606863273f2c2ed50306ef29c90ed
+    Author: Chris Bezuidenhout <Bezuidenhout.chris@gmail.com>
+    Date:   Tue Feb 19 15:32:03 2019 +0000
+
+    Changed 24 hr support number to 4314
+
+    commit 17626ef15ae6764c68e806a3a99d3a202b1f9a2c
+    Author: Chris Bezuidenhout <Bezuidenhout.chris@gmail.com>
+    Date:   Tue Feb 19 15:12:00 2019 +0000
+  
+git checkout 72a6b4ebd529a1e6b69b5dc7b3808ad287b9473f -- resources.html
+git status
+    On branch master
+    Changes to be committed:
+    (use "git reset HEAD <file>..." to unstage)
+
+        modified:   resources.html
+
+git diff --staged
+    diff --git a/resources.html b/resources.html
+    index 1f7ac8c..268c4a2 100755
+    --- a/resources.html
+    +++ b/resources.html
+    @@ -96,16 +96,14 @@
+                <ul>
+                    <li>Comfortable hiking shoes</li>
+                    <li>Hat</li>
+    -                <li>Sunglasses</li>
+    -                <li>Sunscreen</li>
+    -                <li>Insect repellent</li>
+                    <li>Wet/dry bag to protect valuables</li>
+                    <li>Comfortable backpack</li>
+                    <li>Stainless steel water bottle</li>
+                    <li>Multi-purpose tool</li>
+                    <li>Pack no more than one additional day of clothing</li>
+    -
+    -
+    +                <li>Insect repellent</li>
+    +                <li>Sunglasses</li>
+    +                <li>Sunscreen</li>
+                </ul>
+                </li>
+                <li>Bring comfortable shoes. (I know, we shouldn’t have to say that, but you’d be amazed)</li>
+
+# Let's do git reset HEAD on resources.html. That will put it back in our working directory, and then we'll do git check out -- resources.html, 
+# and that now removes it from our working directory so that now our working directory is clean.
+git reset HEAD resources.html 
+    Unstaged changes after reset:
+    M	resources.html
+
+git checkout -- resources.html 
+    git status
+    On branch master
+    nothing to commit, working tree clean
+
+
+
+
+###############################
+# Setting up remote repository:
+###############################
+ pwd
+# shows any remote repositories if it's setup
+ git remote
+    
+ git branch
+    * master # shows all local brances
+ 
+ # Create a github account if you don't have one
+ # Add remote repository:
+ git remote add origin https://github.com/boefbrak/explore_california.git
+ 
+ # Confirm remote repository
+ git remote
+    origin      <<----- origin is the remote repository alias specified in previous command
+
+# See both and remote repositories: 
+ git remote -v
+    origin	https://github.com/boefbrak/explore_california.git (fetch)
+    origin	https://github.com/boefbrak/explore_california.git (push)
+ 
+# See content of configuration files:
+ cat .git/config 
+ 
+# To remove remote repository:
+ git remote rm origin
+
+ #Add it back again:
+ git remote add origin https://github.com/boefbrak/explore_california.git
+ 
+# push local repository to remote repository (master branch):
+ git push -u origin master          <<<----------------- '-u' will track remote branch
+
+#See both local and remote branches:
+ git branch -a
+    * master
+    remotes/origin/master
+
+#################################
+# Cloning a remote repository
+################################
+
+# Go to desired directory u wan to use for the project.
+# Clone the remote repository and specify a new directory name (lynda_version):
+git clone https://github.com/boefbrak/explore_california.git lynda_version
+    Cloning into 'lynda_version'...
+    remote: Enumerating objects: 104, done.
+    remote: Counting objects: 100% (104/104), done.
+    remote: Compressing objects: 100% (75/75), done.
+    remote: Total 104 (delta 26), reused 104 (delta 26), pack-reused 0
+    Receiving objects: 100% (104/104), 1.02 MiB | 590.00 KiB/s, done.
+    Resolving deltas: 100% (26/26), done.
+
+#Go to lynda's directory the project will be there:
+cd lynda_version
+
+
+#################################
+# Tracking remote branches
+################################
+'-u' will track remote branch
+
+#################################
+# Pushing changes to a remote repository
+################################
+
+# Work in explore_california folder (synced with remote repository) and make changes to tours.html
+# change "california Calm" link tourDetail_calm.html to tour_detail_calm.html:
+
+# get the status:
+git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   tours.html
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+
+# Commit changes to local repository/staging ():
+ git commit -am "Change file/link format on tours.html"
+    [master 2e70afe] Change file/link format on tours.html
+    1 file changed, 8 insertions(+), 8 deletions(-)
+
+# check local master branch for changes:
+ git log --oneline
+    2e70afe (HEAD -> master) Change file/link format on tours.html   <<<----- Change
+    1a52e4c (origin/master) Rearrange the items to bring on a trip.
+    72a6b4e Removed contractions from page text.
+    fe0e10e Renamed backpack CAL file for clarity
+    f20aa18 Changed 24 hr support number to 4314
+    17626ef Initial commit
+
+# check remote repository/master branch for changes:
+ git log --oneline origin/master
+    1a52e4c (origin/master) Rearrange the items to bring on a trip.  <<<------------ No changes yet.
+    72a6b4e Removed contractions from page text.
+    fe0e10e Renamed backpack CAL file for clarity
+    f20aa18 Changed 24 hr support number to 4314
+    17626ef Initial commit
+ 
+
+# See the diffences between local mater and remote master (origin/master)
+git diff origin/master..master
+    diff --git a/tours.html b/tours.html
+    index caa9b4c..829eb99 100755
+    --- a/tours.html
+    +++ b/tours.html
+    @@ -83,35 +83,35 @@
+    
+                <div class="tourDescription">
+                <h2>California Calm</h2>
+    -              <p><img src="assets/images/calm_desc_bug.gif" width="195" height="120" alt="California Calm" />Looking for a little relaxation? California Calm is our hand-picked collection of incredible California Spas and therapy retreats. Enjoy unbelievable massage treatments, beauty regimens, and active getaways. We've combed the entire state to find the finest spa experiences available...imagine that, we've even made choosing a spa retreat relaxing! <a href="tourDetail_calm.html" title="California Calm" class="more">learn more!</a></p>
+    +              <p><img src="assets/images/calm_desc_bug.gif" width="195" height="120" alt="California Calm" />Looking for a little relaxation? California Calm is our hand-picked collection of incredible California Spas and therapy retreats. Enjoy unbelievable massage treatments, beauty regimens, and active getaways. We've combed the entire state to find the finest spa experiences available...imagine that, we've even made choosing a spa retreat relaxing! <a href="tour_detail_calm.html" title="California Calm" class="more">learn more!</a></p>
+                </div>
+                <div class="tourDescription">
+                <h2>California Hotsprings</h2>
+
+# Push the changes from local brach to remote branch:
+git push origin master
+    Enumerating objects: 5, done.
+    Counting objects: 100% (5/5), done.
+    Delta compression using up to 8 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 356 bytes | 356.00 KiB/s, done.
+    Total 3 (delta 2), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+    To https://github.com/boefbrak/explore_california.git
+    1a52e4c..2e70afe  master -> master
+
+# Check remote github repository web page for the changes or:
+git log --oneline origin/master -3
+    2e70afe (HEAD -> master, origin/master) Change file/link format on tours.html   <<<-------- Change pushed to github
+    1a52e4c Rearrange the items to bring on a trip.
+    72a6b4e Removed contractions from page text.
+
+
+# Retrieving changes from the remote repository to local repository (lynda_version directory):
+
+git log --oneline 
+    1a52e4c (HEAD -> master, origin/master, origin/HEAD) Rearrange the items to bring on a trip.    <<<--- old version of master
+    72a6b4e Removed contractions from page text.
+    fe0e10e Renamed backpack CAL file for clarity
+    f20aa18 Changed 24 hr support number to 4314
+    17626ef Initial commit
+
+# Fetch updates from remote repository:
+git fetch origin
+    remote: Enumerating objects: 5, done.
+    remote: Counting objects: 100% (5/5), done.
+    remote: Compressing objects: 100% (1/1), done.
+    remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0
+    Unpacking objects: 100% (3/3), done.
+    From https://github.com/boefbrak/explore_california
+    1a52e4c..2e70afe  master     -> origin/master
+
