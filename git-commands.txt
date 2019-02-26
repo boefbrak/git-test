@@ -1,193 +1,193 @@
- 501  ll
-  502  ls -al
-  503  cat first_file.txt 
-  504  git config
-  505  git config --system
-  506  git config --system
-  507  git config --system
-  508  git config --global
-  509  git config --local
-  510  ls a-l
-  511  ls -al
-  512  ls -al .git/
-  513  cat .git/config 
-  514  vi .git/config 
-  515  cd .git/
-  516  ll
-  517  cat HEAD 
-  518  ll refs/
-  519  ll refs/heads/master 
-  520  cat refs/heads/master 
-  521  git log
-  522  git status
-  523  cd ..
-  524  git status
-  525  vi second_file.txt
-  526  vi third_file.txt
-  527  git status
-  528  git add second_file.txt 
-  529  git status
-  530  git add third_file.txt 
-  531  git status
-  532  git commit -m "Add second and third files to project"
-  533  git status
-  534  git log
-  535  vi first_file.txt 
-  536  git status
-  537  git add first_file.txt 
-  538  git status
-  539  vi second_file.txt 
-  540  vi third_file.txt 
-  541  git status
-  542  git add second_file.txt 
-  543  git status
-  544  git commit -m "Made changes to first and second files"
-  545  git status
-  546  git log
-  547  git add third_file.txt 
-  548  git status
-  549  git commit -m "Made changes to third file."
-  550  git status
-  551  git log
-  552  vi first_file.txt 
-  553  git status
-  554  git diff
-  555  vi first_file.txt 
-  556  git diff
-  557  vi third_file.txt 
-  558  git status
-  559  git diff
-  560  git diff first_file.txt 
-  561  git status
-  562  git add first_file.txt 
-  563  git status
-  564  git diff
-  565  git diff --stage
-  566  git diff --staged
-  567  git diff --staged
-  568  cat first_file.txt 
-  569  git status
-  570  git add third_file.txt 
-  571  git status
-  572  git diff
-  573  git diff --staged
-  574  git commit -m "Minor text edits"
-  575  git diff --staged
-  576  git diff
-  577  git status
-  578  vi file_to_delete1.txt
-  579  git diff
-  580  git status
-  581  cp file_to_delete1.txt file_to_delete2.txt 
-  582  ll
-  583  git status
-  584  git add .
-  585  git status
-  586  git commit "The 'red shirt' files"
-  587  git commit -m "The 'red shirt' files"
-  588  git status
-  589  git status
-  590  git rm file_to_delete1.txt
-  591  git status
-  592  git commit -m "Deleted first red shirt file"
-  593  git status
-  594  git log
-  595  ll
-  596  git rm file_to_delete2.txt 
-  597  ll
-  598  git status
-  599  git commit -m "Deleted second red shirt file"
-  600  git status
-  601  ll
-  602  mv first_file.txt primary_file.txt
-  603  git status
-  604  git add primary_file.txt 
-  605  git rm first_file.txt
-  606  git status
-  607  git mv second_file.txt seconadry_file.txt
-  608  git status
-  609  ll
-  610  mkdir first_directory
-  611  git status
-  612  git mv third_file.txt first_directory/
-  613  git status
-  614  ll
-  615  git commit -m "Reorganized file by moving files."
-  616  git status
-  617  ll
-  618  cd ..
-  619  ll
-  620  ls -al
-  621  cd explore_california/
-  622  ls -al
-  623  git status
-  624  git init
-  625  ls -lt
-  626  ls -al
-  627  git status
-  628  git log
-  629  git add .
-  630  git status
-  631  git commit -m "Initial commit"
-  632  git status
-  633  git log
-  634  ll
-  635  git stats
-  636  git status
-  637  git status
-  638  git status
-  639  git diff 
-  640  git diff --color-words contact.html 
-  641  git status
-  642  git commit -a -m "Changed 24 hr support number to 4314"
-  643  git log
-  644  git mv tours/tour_detail_backpack.html tours/tour_detail_backpack_cal.html 
-  645  git status
-  646  git status
-  647  git diff 
-  648  git add tours.html 
-  649  git add tours/
-  650  git status
-  651  git status
-  652  git commit -m "Renamed backpack CAL file for clarity"
-  653  git status
-  654  git add contact.html 
-  655  git status
-  656  git commit -m "Removed contractions from page text."
-  657  git log
-  658  git status
+l
+ls -al
+cat first_file.txt 
+git config
+git config --system
+git config --system
+git config --system
+git config --global
+git config --local
+ls a-l
+ls -al
+ls -al .git/
+cat .git/config 
+vi .git/config 
+cd .git/
+ll
+cat HEAD 
+ll refs/
+ll refs/heads/master 
+cat refs/heads/master 
+git log
+git status
+cd ..
+git status
+vi second_file.txt
+vi third_file.txt
+git status
+git add second_file.txt 
+git status
+git add third_file.txt 
+git status
+git commit -m "Add second and third files to project"
+git status
+git log
+vi first_file.txt 
+git status
+git add first_file.txt 
+git status
+vi second_file.txt 
+vi third_file.txt 
+git status
+git add second_file.txt 
+git status
+git commit -m "Made changes to first and second files"
+git status
+git log
+git add third_file.txt 
+git status
+git commit -m "Made changes to third file."
+git status
+git log
+vi first_file.txt 
+git status
+git diff
+vi first_file.txt 
+git diff
+vi third_file.txt 
+git status
+git diff
+git diff first_file.txt 
+git status
+git add first_file.txt 
+git status
+git diff
+git diff --stage
+git diff --staged
+git diff --staged
+cat first_file.txt 
+git status
+git add third_file.txt 
+git status
+git diff
+git diff --staged
+git commit -m "Minor text edits"
+git diff --staged
+git diff
+git status
+vi file_to_delete1.txt
+git diff
+git status
+cp file_to_delete1.txt file_to_delete2.txt 
+ll
+git status
+git add .
+git status
+git commit "The 'red shirt' files"
+git commit -m "The 'red shirt' files"
+git status
+git status
+git rm file_to_delete1.txt
+git status
+git commit -m "Deleted first red shirt file"
+git status
+git log
+ll
+git rm file_to_delete2.txt 
+ll
+git status
+git commit -m "Deleted second red shirt file"
+git status
+ll
+mv first_file.txt primary_file.txt
+git status
+git add primary_file.txt 
+git rm first_file.txt
+git status
+git mv second_file.txt seconadry_file.txt
+git status
+ll
+mkdir first_directory
+git status
+git mv third_file.txt first_directory/
+git status
+ll
+git commit -m "Reorganized file by moving files."
+git status
+ll
+cd ..
+ll
+ls -al
+cd explore_california/
+ls -al
+git status
+git init
+ls -lt
+ls -al
+git status
+git log
+git add .
+git status
+git commit -m "Initial commit"
+git status
+git log
+ll
+git stats
+git status
+git status
+git status
+git diff 
+git diff --color-words contact.html 
+git status
+git commit -a -m "Changed 24 hr support number to 4314"
+git log
+git mv tours/tour_detail_backpack.html tours/tour_detail_backpack_cal.html 
+git status
+git status
+git diff 
+git add tours.html 
+git add tours/
+git status
+git status
+git commit -m "Renamed backpack CAL file for clarity"
+git status
+git add contact.html 
+git status
+git commit -m "Removed contractions from page text."
+git log
+git status
   
   Undoing changes in working directory:
   -------------------------------------
-  659  git status
-  660  git diff
-  661  git checkout -- index.html 
-  662  git status
-  663  history 
+  git status
+  git diff
+  git checkout -- index.html 
+  git status
+  history 
 
   Undoing changes in staging area/index (amend):
   --------------------------------------
-  664  git status
-  665  git diff
-  666  git add resources.html 
-  667  git status
-  668  git diff
-  669  git reset HEAD resources.html 
-  670  git diff
-  671  git status
-  672  git add resources.html 
-  673  git status
-  674  git commit -m "rearrange the items to bring on a trip."
-  675  git status
-  676  git log
-  677  git status
-  678  ll
-  679  git status
-  680  git add resources.html 
-  681  git status
-  682  git commit --amend -m "Rearrange the items to bring on a trip."
-  683  git status
-  684  git log
+  git status
+  git diff
+  git add resources.html 
+  git status
+  git diff
+  git reset HEAD resources.html 
+  git diff
+  git status
+  git add resources.html 
+  git status
+  git commit -m "rearrange the items to bring on a trip."
+  git status
+  git log
+  git status
+  ll
+  git status
+  git add resources.html 
+  git status
+  git commit --amend -m "Rearrange the items to bring on a trip."
+  git status
+  git log
   
 #Retrieving old versions:
 
